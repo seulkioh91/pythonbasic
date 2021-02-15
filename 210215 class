@@ -1,0 +1,579 @@
+odd = [1,3,5,7,9]
+print(odd)
+
+a = [] #빈 리스트 생성 
+b = [1,2,3] #숫자
+c = ['Life', 'is', 'too', 'short'] #문자
+d = [1,2,'Life','is'] # 숫자와 문자 섞어서 가능
+e = [1,2,3,['Life','is']] #리스트 안에 리스트 가능
+
+a = [1,2,3]
+
+a
+
+a[0]
+
+a[0]+a[2]
+
+a = [1,2,3]
+a[-1]
+
+a=[1,2,3,['a','b','c']]
+
+a[0]
+
+a[-1]
+
+a[-1][2]
+
+a = [1,2,3,4,5]
+
+a[0:2]
+
+a = [1,2,3]
+b = [4,5,6]
+a+b
+
+b+a
+
+a*3
+
+len(a)
+
+a = [1,2,3]
+
+a[2] = 4
+
+a
+
+del a[1]
+
+a
+
+a = [1,2,3,4,5]
+
+del a[2:]
+
+a
+
+a = [1,2,3]
+
+a.append(4)
+
+a
+
+a.append([5,6])
+
+a
+
+a = [1,4,3,2]
+a.sort()
+
+a.reverse()
+
+a
+
+a = ['a','c','b']
+
+a.reverse()
+
+a
+
+a = [2,3,1]
+
+a.sort()
+a.reverse()
+
+a
+
+a = [2,3,1]
+a.sort(reverse = True)
+a   #한줄로 정렬을 내림차순으로 하는 법 *구글을 잘 활용해서 찾아보자!
+
+a = [1,2,3]
+a.index(3)
+
+a.index(0)
+
+a.insert(0,4) #a의 0번째에 4를 넣는다.
+
+a
+
+a = [1,2,3,1,2,3]
+
+a.remove(3) #a리스트에서 3을 제거한다.
+
+a
+
+a.remove(3) #a리스트에서 한번 더 3을 제거한다.
+
+a
+
+a =[1,2,3]
+
+a.pop() #마지막걸 꺼낸다.
+
+a #그래서 a안에는 3이 없어진 후에 출력된다.
+
+a = [1,2,3,1]
+
+a.count(1) #1의 갯수를 세어본다. 2개가 나왔다.
+
+a = [1,2,3]
+a.extend([4,5])
+a #a에 리스트 4,5를 확장해서 넣는다. append는 리스트 안에 리스트로 들어가지만, extend는 리스트의 항목으로 바로 들어간다.
+
+ # 튜플! Tuple
+
+
+t1=() #빈 Tuple
+t2=(1,) #Tuple은 요소가 한개일 경우에는 ,(쉼표)를 꼭 찍어준다.)
+t3=(1,2,3) 
+t4=1,2,3 #Tuple은 괄호를 생략할 수 있다.
+t5=('a','b',('ab','cd')) #Tuple은 Tuple 안에 Tuple을 넣을 수 있다.
+
+t5
+
+t1=(1,2,'a','b')
+
+del t1[0]
+
+t1[0] = 'c'
+
+t1[0] #인덱싱은 가능하다.
+
+t1[1] #인덱싱 가능
+
+t1[1:] #슬라이싱 가능
+
+t2 = (3,4)
+
+t1+t2 #튜플과 튜플은 연산 가능.
+
+t2*2
+
+t1 = (1,2,3,4)
+
+len(t1)
+
+t6=[1,]
+
+t6
+
+  # 딕셔너리! Dictionary 
+
+# 딕셔너리는 순차적으로 해당 요솟값을 구하지 않는다. (리스트나 튜플은 순서대로)
+# 딕셔너리는 중괄호 {}
+
+a = {1:'hi'}
+
+a = {'a':[1,2,3]}
+
+a
+
+a = {1:'a'}
+
+a
+
+a[2] = 'b' #2라는 key값에 b라는 value값을 추가 *쌍으로 넣어야 한다.
+
+a
+
+a['name'] = 'pey'
+
+a # 문자 숫자 동시에 key값 value값 추가
+
+del a[1]
+
+a #key 값 1을 삭제하니 value도 삭제되었다. *쌍으로 삭제된다.
+
+grade = {'pey':10, 'julliet':99} #key 값으로 value값 뽑아오기.
+
+grade['pey']
+
+grade['julliet']
+
+sports={"김연아":"피겨스케이팅", "류현진":"야구", "박지성":"축구", "귀도":"파이썬"}
+
+sports['김연아']
+
+sports['박지성']
+
+del sports['김연아']
+
+sports
+
+# 딕셔너리를 만들 때, 주의할 점은. Key값은 고유값이기때문에, 하나를 제외한 나머지는 무시된다.
+
+ # 집합 Set
+
+s1 = set([1,2,3])
+
+s1
+
+s2 = set("Hello") #집합자료형의 특징 1.중복을 허용하지 않는다. 2.순서가 없다. helo 로 나올수도 hloe로 나올수도.. 마음대로
+ #순서가 없기 때문에, 인덱싱과 슬라이싱이 불가능하다.
+
+s2
+
+s = set()
+
+s
+
+s1
+
+l1 = list(s1) #리스트로 바꿔줌
+
+l1
+
+t1 = tuple(s1) #튜플로 바꿔줌
+
+t1
+
+s1 = set([1,2,3,4,5,6])
+s2 = set([4,5,6,7,8,9])
+
+s1&s2 #교집합 ( &는 동시에 만족)
+
+s1|s2 #합집합 (|는 중복값 제외하고 모두 표현)
+
+s1-s2 #차집합 s1에서 s2값 빼기
+
+s2-s1 #차집합 s2에서 s1값 빼기
+
+s1.difference(s2)
+
+s1 = set([1,2,3])
+s1.add(4)
+
+s1
+
+s1.update([4,5,6])
+
+s1
+
+s1.remove(2)
+
+s1
+
+s1.remove(6)
+
+s1
+
+ # Bool
+
+# True는 반드시 대문자 T로 시작해야한다.
+a = True
+b = False
+
+type(a)
+
+type(b)
+
+type(s1)
+
+1 == 2
+
+1 == 1
+
+2 > 1
+
+2 < 1
+
+"python"
+
+a = [1,2,3,4]
+while a:
+    print(a.pop()) # pop은 끝에서부터 하나씩 뽑아내는것.
+    
+    # While은 조건이 참인 동안에만 돈다.
+
+if []:
+    print("참")
+else:
+    print("거짓")
+
+bool("python")
+
+bool("")
+
+bool([1,2,3])
+
+bool([])
+
+bool(0)
+
+bool(1)
+
+bool(-1)
+
+bool(None)
+
+ # 연습문제!
+
+#1
+k=80
+e=75
+m=55
+(k+e+m)/3
+
+#2
+13%2
+
+#3
+pin=("881120-1068234")
+yyyymmdd=pin[:6]
+num = pin[-7:]
+print(yyyymmdd)
+print(num)
+
+#4
+pin="881120-1068234"
+sex=pin[7]
+print(sex)
+
+#5
+a = "a:b:c:d"
+b = a.replace(":","#")
+print(b)
+
+#6
+a=[1,3,5,4,2]
+a.sort()
+a.reverse()
+print(a)
+
+#7
+a = ['Life', 'is', 'too', 'short']
+result=" ".join(a)
+print(result)
+
+#8
+a=(1,2,3)
+a=(1,2,3,4)
+print(a)
+
+#9
+a = dict()
+a
+
+#10
+a={'A':90,'B':80,'C':70}
+result=a.pop('B')
+print(a)
+print(result)
+
+#11
+a = [1,1,1,2,2,3,3,3,4,4,5]
+aSet=set(a)
+b=list(aSet)
+print(b)
+
+#12
+a=b=[1,2,3]
+a[1]=4
+print(b)
+
+ # IF문
+
+money = True
+if money:
+    print("택시를")
+    print("타고")
+    print("가라")
+else:
+    print("걸어가라")
+
+i=0
+if i<1:
+    print("ok")
+else:
+    print("not ok")
+
+i=0
+if i!=0:   # != 는 같지 않다 의 뜻.
+    print("ok")
+else  :
+    print("not ok")
+
+5!=5
+
+money = 2000
+if money >= 3000:
+    print("택시를 타고 가라")
+else:
+    print("걸어가라")
+
+ # and, or, not
+
+#and = x와 y 모두 참이어야 참
+#or = x와 y중 하나만 참이어도 참
+#not = x가 거짓이면 참
+
+money = 2000
+card = True
+if money >=3000 or card:  # or 라서 하나만 만족해도 True가 진행된다. 
+    print("택시를 타고 가라")
+else:
+    print("걸어가라")
+
+money = 2000
+card = True
+if money >=3000 and card:  # and 라서 둘 다 만족해야 True가 나온다. 3000원이 안되기때문에 걸어가야한다.
+    print("택시를 타고 가라")
+else:
+    print("걸어가라")
+
+pocket = ['paper','cellphone','money']
+
+if 'money' in pocket:
+    print("택시 타자")
+else:
+    print("걸어 가자")
+
+pocket = ['paper','money','cellphone']
+if 'money' in pocket:
+    pass
+else:
+    print("카드를 꺼내라")  # 그냥 pass되는 결과가 나온다. 
+
+pocket = ['paper','handphone']
+card = True
+if 'money' in pocket:
+    print("택시를 타라")
+else:
+    if card:
+        print("택시를 타라")
+    else:
+        print("걸어가라")
+
+pocket = ['paper','handphone']
+card = True
+
+if 'money' in pocket: pass
+else: print("카드를 써라")  # 한줄로 구현하는것이 훨씬 직관적이고 좋다.
+
+# if 'money' in pocket:
+#     print("택시를 타라")
+# elif card:
+#     print("택시를 타라")
+# else:
+#     print('걸어가라')
+
+#  전체적으로 주석을 걸 때에는,
+#     해당하는 내용을 드래그 하고 Ctrl+/ 하면 전체적으로 주석이 들어간다.
+
+bag = ['wallet', 'coffee', 'tissue']
+tea = True
+
+if 'watch' in bag: print("keep money!")
+else: print("도망쳐")
+
+if score >= 60:
+    message = "sucess"
+else:
+    message = "failure"
+
+# 위/아래 같은 내용인데, 줄을 짧게 바꿀 수도 있다.  하지만 윗 내용이 직관적이다.
+
+message = "sucess" if score >=60 else "failure"
+
+ # While 문
+
+treeHit = 0
+while treeHit < 10:
+    treeHit = treeHit +1
+    print("나무를 %d번 찍었습니다." % treeHit)
+    if treeHit == 10:
+        print("나무 넘어갑니다.")
+
+prompt = """
+1. Add
+2. Del
+3. List
+4. Quit
+...
+Enter number:
+"""
+
+number = 0
+while number != 4:
+    print(prompt)
+    number = int(input())
+    
+#입력을 받아서, 실행하는 코드. 
+# inpult 으로 들어가는 애들은 무조건 String(글자형) 이다. 
+# 그렇기 때문에 이 코드에서는 input 에 int 를 감싸준 것이다.
+# 4가 나올때까지 계속 input 창이 나온다.
+# While 은 몇번을 반복할 지 모를 때 사용한다. For는 정확하게 반복하는 횟수를 알 때 주로 사용한다.
+        
+
+coffee = 10
+money = 300
+while money : 
+    print("돈을 받았으니 커피를 줍니다.")
+    coffee = coffee -1
+    print("남은 커피의 양은 %d개 입니다." % coffee)
+    if coffee == 0:
+        print("커피가 다 떨어졌습니다. 판매를 중지합니다")
+        break
+
+coffee = 10
+while True:
+    money = int(input("돈을 넣어 주세요: "))
+    if money == 300:
+        print("커피를 줍니다.")
+        coffee = coffee -1
+    elif money > 300:
+        print("거스름돈 %d를 주고 커피를 줍니다." % (money -300))
+        coffee = coffee -1
+    else:
+        print("돈을 다시 돌려주고 커피를 주지 않습니다.")
+        print("남은 커피의 양은 %d개 입니다." % coffee)
+    if coffee == 0:
+        print("커피가 다 떨어졌습니다. 판매를 중지 합니다.")
+        break
+    
+
+coffee = 5
+while True:
+    money = int(input("돈을 넣어주세요"))
+    if money == 300:
+        print("커피를 줍니다")
+        coffee = coffee-1
+        print("남은 커피의 양은 %d개 입니다." % coffee)
+        
+    elif money > 300:
+        print("거스름돈 %d를 주고 커피를 줍니다." % (money - 300))
+        coffee = coffee-1
+        
+        print("남은 커피의 양은 %d개 입니다." % coffee)
+    else:
+        print("돈을 다시 돌려주고 커피를 주지 않습니다.")
+        print("남은 커피의 양은 %d개 입니다." % coffee)
+    if coffee == 0:
+        print("커피가 다 떨어졌습니다. 판매를 중지 합니다.")
+        break
+
+a = 0
+while a < 10:
+    a = a+1
+    if a % 2 == 0: continue #짝수는 찍지말고, 홀수만 찍어라
+    print(a)
+
+a = 0
+while a < 10:
+    a = a+1
+    if a % 2 == 1: continue #짝수는 찍지말고, 홀수만 찍어라
+    print(a)
+
+ # For문
+
+test_list = ['one', 'two', 'three']
+for i in test_list:
+    print(i)
+
+a = [(1,2),(3,4),(5,6)]
+
+for (first, last) in a:
+    print(first+last)
